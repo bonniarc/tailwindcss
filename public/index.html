@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="./style.css" rel="stylesheet">
+  <script src="./app.js" defer></script>
+  <link href="./style.css" rel="stylesheet"> 
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
   <style type="text/tailwindcss">
     @layer utilities {
       
@@ -21,11 +24,25 @@
             <header-list class="relative bg-sky-500 mt-2">
                 <div class="flex items-center text-sky-900 md:text-white">
                     <logo class="px-5 ml-12 md:ml-7 absolute top-5 font-bold text-xl">ロゴ</logo>
-        
                 </div>
+        
+                <div class="absolute z-40">    
+                    <a href="#" class="text-3xl" id="menuBtn">
+                        <i class='my-5 mx-7 float:right md:hidden bx bx-menu' style='color:#265376'  ></i>
+                    </a>   
+                </div>  
                 
-                <div>
-                    
+                <div class="absolute container h-screen bg-sky-500/90 flex flex-col items-center justify-center text-xl text-white font-bold
+                 gap-y-8 z-20 scale-x-0 duration-200 origin-left" id="menu">
+                    <a class="mt-10 text-3xl">メニュー</a>
+                    <a href="#">選ばれる理由</a>
+                    <a href="#">マッチングの流れ</a>
+                    <a href="#">よくあるご質問</a>
+                    <button href="#" class="inline-block mt-5 p-3 rounded text-sm w-36 h-15 bg-slate-100 border-sky-600 border text-sky-700 round hover:bg-gray-200 ">企業の方はこちら</button>
+                    <button href="#" class="inline-block p-3 rounded text-sm w-36 h-15 bg-slate-100 border-sky-600 border text-sky-700 round hover:bg-gray-200 ">お問い合わせ</button>
+                </div>
+
+          
                                     
                     <ul class="hidden md:inline-flex flex auto-cols-max md:gap-3 text-slate-200 text-xs md:text-sm absolute top-5 text-center ml-32 md:mx-32">
                         <li href="#responsive-header" class="block mt-2 lg:inline-block text-white hover:text-slate-300 mr-4">
@@ -39,17 +56,14 @@
                         </li>
                     </ul>
 
-                    <svg class="absolute h-7 w-7 m-5 float:right md:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                        <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#214f73" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
-                    </svg>
-
                     <div class="hidden md:inline-flex ml-96 absolute top-0 right-10">
                             
                         <button href="#" class="inline-block p-2 ml-2 my-4 rounded text-sm w-36 h-15 bg-slate-100 border-sky-600 border text-sky-700 round hover:bg-gray-200 sm:top-40 lg:top-5 ">企業の方はこちら</button>
                         <button href="#" class="inline-block p-2 ml-2 my-4 rounded text-sm w-36 h-15 bg-slate-100 border-sky-600 border text-sky-700 round hover:bg-gray-200 sm:top-40 lg:top-5">お問い合わせ</button>
                     </div>
 
-                    <img class="w-full top-0 mb-5" src="/ladyy.PNG" alt="img">
+                    <img class="w-full top-0 mb-5" src="../ladyy.PNG" alt="img">
+                        
                 
                     <div class="absolute inset-x-0 bottom-0 mb-5 flex justify-center"> 
                         <button href="#" class="md:p-3 md:w-48 bg-slate-100 text-xs md:text-sm text-sky-600 border-sky-600 border mr-2">資料をダウンロードする</button>
@@ -67,10 +81,10 @@
           <h1 class="text-center text-2xl pt-14 p-20">○○が選ばれる<span class="font-bold">3つの理由</span></h1>
             <div class="relative grid grid-cols-3 gap-x-5 mx-10 md:mx-10 pb-32">
                 <div class="m-w-32 h-auto md:size-full bg-white border border-zinc-500 rounded relative ">
-                    <div class="box-content
+                    <div class="box-content 
                     h-10 w-10 p-4 flex justify-center border-2 border-zinc-800 rounded-full text-2xl
                     flex items-center absolute -top-8 left-1/2 transform -translate-x-1/2 bg-white z-10">01</div> 
-                    <img class=" size-sm mb-2" src="/blueblue.jpg" alt="img">
+                    <img class=" size-sm mb-2" src="../blueblue.jpg" alt="img">
                     <a class="flex text-justified text-sm md:text-base py-2 px-5">tex tex tetxt etexte txet</a>     
                 </div>      
 
@@ -78,7 +92,7 @@
                     <div class="items-center box-content 
                     h-10 w-10 flex justify-center p-4 border-2 border-zinc-800 text-2xl rounded-full
                     flex items-center absolute -top-8 left-1/2 transform -translate-x-1/2 bg-white z-10">02</div> 
-                    <img class=" size-ms mb-2" src="/blueblue.jpg" alt="img">
+                    <img class=" size-ms mb-2" src="../blueblue.jpg" alt="img">
                     <a class="flex text-justified text-sm md:text-base py-2 px-5">tex tex tetxt etexte txet</a>
                 </div>
 
@@ -86,7 +100,7 @@
                     <div class="items-center box-content 
                     h-10 w-10 p-4 flex justify-center border-2 border-zinc-800 text-2xl  rounded-full
                     flex items-center absolute -top-8 left-1/2 transform -translate-x-1/2 bg-white z-10 ">03</div>
-                    <img class=" size-ms mb-2" src="/blueblue.jpg" alt="img">
+                    <img class=" size-ms mb-2" src="../blueblue.jpg" alt="img">
                     <a class="flex text-justified text-sm md:text-base py-2 px-5">tex tex tetxt etexte txet</a>
                 </div>
          
@@ -214,9 +228,9 @@
 
 
 
-                    <div class="flex justify-center">
-                       <div class="relative mx-20 my-20 box-content 
-                       min-w-80 max-w-4/5 h-72 px-4 border-2 border-sky-600 bg-sky-600">
+                <div class="flex justify-center">
+                    <div class="relative mx-40 my-20 box-content 
+                       min-w-80 max-w-full h-72 px-4 border-2 border-sky-600 bg-sky-600">
                     <h1 class="text-center text-slate-200 text-lg md:text-xl font-semibold my-5 mx-10 md:mx-20">新しい仕事に挑戦するなら〇〇〇〇</h1>
                     <h2 class="text-justified text-slate-200 md:text-lg font-semibold mx-10 md:mx-20">CMO株式会社は、デジタルマーケティングに関する事業を展開しています。 あなたの転職を、弊社の専門的な観点や知識からサポートいたします。</h2>
                     
@@ -252,7 +266,7 @@
                             <li class="md:w-60">151-0051 東京都渋谷区千駄ケ谷5-27-5 リンクスクエア新宿 16F</li>
                         </ul>
 
-                       <ul class="ml-12 md:ml-0 md:flex justify-center pt-5 gap-10 text-xs md:text-sm">
+                        <ul class="ml-12 md:ml-0 md:flex justify-center pt-5 gap-10 text-xs md:text-sm">
                             <li>トップ</li>
                             <li>お問い合わせ</li>
                             <li>プライバシーポリシー</li>
